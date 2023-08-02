@@ -1,29 +1,42 @@
 let txtareanote=document.querySelector('#txtareanote');
 let btnadd = document.querySelector('#btnadd');
-let swrapper=document.querySelector('.swrapper');
-let not1=document.getElementById('not1');
+let notes=document.querySelector('.notes');
+let viewdetailsbtn=document.getElementById('viewdetailsbtn');
 
 
-btnadd.addEventListener('click',()=>{
-     let txtin=txtareanote.value;
 
-     if(txtin===' '){
-        alert('Text area cannot be empty');
-        return;
-     }
-    
-    let note=document.createElement('div');
-    swrapper.classList.add('.not1');
-    swrapper.appendChild(note);
-    note.innerHTML=`
-    <h4>${txtin}</h4>
-    <p>This is my first note taking App</p>
-    <button type="button" id="viewdetailsbtn">View Details</button>
-    
-    `
+btnadd.addEventListener('click',(e)=>{
+e.preventDefault();
+addnote();
+})
 
 
-    
+function addnote(){
+   
+   let txtin=txtareanote.value;
 
+   if(txtin===' '){
+      alert('Text area cannot be empty');
+      return;
+   }
+  
+  let card=document.createElement('div');
+  //note.setAttribute('class','card');
+ 
+  card.classList.add('card');
+  notes.appendChild(card);
+ card.innerHTML=`
+  <h4>NOTE</h4>
+  <p>${txtin}</p>
+  <button type="button" id="viewdetailsbtn">View Details</button>
+  
+  `
+  txtareanote.value= '';
+}
 
+let clear=card.querySelector('.del');
+
+clear.addEventListener('click',function(){
+
+   card.remove();
 })

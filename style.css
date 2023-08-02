@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300&family=Poppins:wght@200&display=swap');
 
 *{
-    font-family: 'Barlow', sans-serif;
+    
     font-family: 'Poppins', sans-serif;
 }
 h1{
@@ -46,27 +46,25 @@ height: 25px;
 width: 800px;
 
 }
-.swrapper{
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 50px 50px;
-    font-weight: bold;
-    font-size: 14px;
+.notes{
+width: 100%;
+display: flex;
+flex-wrap: wrap;
+justify-content: flex-start;
+padding: 3em 2em 2em 2em;
 
 
 }
-.not1{
-    padding: 25px 30px;
+.card{
+    background-color: #fff;
+
+    padding: 1rem 1.5rem ;
     border: 1px solid #ddd;
-    margin: 30px auto;
+    margin: 1rem 2rem;
+    width: 32rem;
+    border-radius: 5px;
 }
-.not2{
-    padding: 25px;
-    border: 1px solid #ddd;
-    margin: 30px auto;
-}
+
 #viewdetailsbtn{
     background-color: blue;
     color: white;
