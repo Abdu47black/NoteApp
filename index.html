@@ -8,12 +8,33 @@
     <script  defer src="app.js"></script>
 </head>
 <body>
-    <h1>Note Taker</h1>
-    <h3>Add A New Note:</h3>
+    <div class="container">
+        
+        <h1>Note Taker</h1>
+        <h3>Add A New Note:</h3>
+        
+        <div class="wrapper">
 
-    <label for="note">Note:</label><input type="text" name="note" id="notetxt">
-    <button type="button">Add Note</button>
-    
-    
+            <label for="note">Note:</label><textarea name="note" id="txtareanote" placeholder="Write your note here"> </textarea>
+            <button id="btnadd" type="button">Add Note</button>
+            
+        </div>
+        <div class="swrapper">
+            <div class="not1">
+
+                <h4>Note 1</h4>                                              
+                <p>This is my first note taking App</p>
+                <button type="button" id="viewdetailsbtn">View Details</button>     
+            </div>
+            <div class="not2">
+                
+                <h4>Note 2</h4>
+                <p>This is my first note taking App</p>
+                <button type="button" id="viewdetailsbtn">View Details</button>
+            </div>
+            
+        </div>
+        
+    </div>
 </body>
 </html>
