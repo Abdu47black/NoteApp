@@ -1,42 +1,61 @@
-let txtareanote=document.querySelector('#txtareanote');
-let btnadd = document.querySelector('#btnadd');
-let notes=document.querySelector('.notes');
-let viewdetailsbtn=document.getElementById('viewdetailsbtn');
+let txtareanote=document.getElementById('#txtareanote');
+let btnadd = document.getElementById('#btnadd');
+let notes=document.getElementById('.notes');
+let modal=document.getElementById('pmodal');
+console.log(modal)
 
 
 
-btnadd.addEventListener('click',(e)=>{
-e.preventDefault();
-addnote();
-})
 
-
-function addnote(){
-   
+btnadd.addEventListener('click',()=>{
    let txtin=txtareanote.value;
 
-   if(txtin===' '){
-      alert('Text area cannot be empty');
+   if(txtin==' ')
+   {
+      alert("some fileds are empty");
       return;
-   }
+    }
+   
+
   
-  let card=document.createElement('div');
+  let cards=document.createElement('div');
   //note.setAttribute('class','card');
  
-  card.classList.add('card');
-  notes.appendChild(card);
- card.innerHTML=`
+  cards.classList.add('card');
+  notes.appendChild(cards);
+ cards.innerHTML=`
   <h4>NOTE</h4>
   <p>${txtin}</p>
-  <button type="button" id="viewdetailsbtn">View Details</button>
+  <button type="button" id="viewdetailsbtn">Delete</button>
+  <button type="button" id="deletebtn">View Details</button>
   
   `
   txtareanote.value= '';
-}
 
-let clear=card.querySelector('.del');
 
-clear.addEventListener('click',function(){
+   let clear=cards.getElementById('viewdetailsbtn')
 
-   card.remove();
+     clear.addEventListener('click',()=>{
+      cards.remove();
+     })
+
+     const deletn= cards.getElementById('deletebtn');
+     const dele=cards.
+     deletn.addEventListener('click',()=>{
+      modal.innerHTML=`
+      <div id="modal-container ">
+      <div id="modal">
+           <button id="modalbtn">&times;</button>
+          <p id="pmodal">${txtin}
+          </p>
+      </div>
+      </div>`
+
+
+       
+     })
 })
+
+
+
+

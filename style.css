@@ -13,7 +13,7 @@ h1{
 h3{
     text-align: center;
     color: green;
-    font-size: 35px;
+    font-size: 2.5rem;
 }
 label{
     text-align: center;
@@ -61,19 +61,61 @@ padding: 3em 2em 2em 2em;
     padding: 1rem 1.5rem ;
     border: 1px solid #ddd;
     margin: 1rem 2rem;
-    width: 32rem;
+    width: 22rem;
     border-radius: 5px;
 }
 
 #viewdetailsbtn{
-    background-color: blue;
+    background-color: red;
     color: white;
     font-size: 12px;
     padding: 8px ;
     border-radius: 10%;
     font-weight: bold;
+    width: 10rem;
 
 }
-.not1 h4{
+#deletebtn{
+    background-color: rgb(14, 42, 168);
+    color: white;
+    font-size: 12px;
+    padding: 8px ;
+    border-radius: 10%;
+    font-weight: bold;
+    width: 10rem;
+
+  
+}
+#modal-container{
+ position: absolute;
+ left:0;
+ bottom: 0;
+ top: 0;
+ right: 0;
+ display: grid;
+place-items: center;
+
+}
+
+#modal{
+    width: 800px;
+    height:80vh;
+    background-color: aqua;
+    border: 2px solid #ddd;
+    overflow: auto;
+    padding: 1rem;
+    position: relative;
+}
+#modalbtn{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-size: 2rem;
+    line-height: 2rem;
+    border-radius: 50%;
+    border: 2px solid black;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
 
 }
